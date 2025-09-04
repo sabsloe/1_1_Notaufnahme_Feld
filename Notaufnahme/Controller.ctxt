@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Controller
+comment1.params=
+comment1.target=Controller()
+comment2.params=event
+comment2.target=void\ aufruf(javafx.event.ActionEvent)
+comment3.params=event
+comment3.target=void\ einfuegen(javafx.event.Event)
+comment4.params=event
+comment4.target=void\ handleTxtEinfuegen(javafx.scene.input.KeyEvent)
+comment5.params=
+comment5.target=void\ patientEinfuegen()
+comment6.params=
+comment6.target=void\ listeAktualisieren()
+numComments=7
