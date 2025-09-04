@@ -10,11 +10,6 @@ public class Warteliste
         liste = new Patient[maxAnzahl];
     }
 
-    public Patient[] getListe()
-    {
-        return liste;
-    }
-
     public void einfuegen(Patient pat)
     {
         if (!istVoll())
@@ -66,7 +61,6 @@ public class Warteliste
 
     public boolean istLeer()
     {
-        // Hier gibt es etwas zu tun
         if (anzahl == 0)
         {
             return true;

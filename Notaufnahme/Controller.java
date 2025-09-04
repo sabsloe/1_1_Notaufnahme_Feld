@@ -27,10 +27,10 @@ public class Controller {
     // Meldung im entspeichenden Feld
     @FXML
     public void aufruf(ActionEvent event) {
-        if (warteliste.istLeer()==false)
-        {
-            Patient pat = warteliste.entfernen();
-            listeAktualisieren();
+        Patient pat = warteliste.entfernen();
+        if (pat != null)
+        {  
+            listView.getItems().remove(pat.getName());
             lblMeldung.setText("Nächster Patient: " + pat.getName());
         }
         else { 
@@ -70,20 +70,12 @@ public class Controller {
             {
                 Patient pat = new Patient(name);
                 warteliste.einfuegen(pat);
-                listeAktualisieren();
+                listView.getItems().add(name);
                 txtName.setText("");
             }
         }
     }
 
-    public void listeAktualisieren()
-    {
-        listView.getItems().clear();
-        Patient[] liste = warteliste.getListe();
-        for (int i = 0; i < warteliste.getAnzahl(); i++)
-        {
-            listView.getItems().add(liste[i].getName());
-        }
-    }
+    
 
 }
